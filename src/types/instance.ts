@@ -22,6 +22,11 @@ export interface Elements {
   daysContainer?: HTMLDivElement;
   days: HTMLDivElement;
 
+  unbuttonContainer?: HTMLDivElement;
+  unYearButton: HTMLSpanElement;
+  unMonthButton: HTMLSpanElement;
+  unDayButton: HTMLSpanElement;
+
   weekWrapper?: HTMLDivElement;
   weekNumbers?: HTMLDivElement;
 

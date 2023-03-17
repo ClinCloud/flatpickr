@@ -126,7 +126,7 @@ function FlatpickrInstance(
     if (!self.isMobile && isSafari) {
       positionCalendar();
     }
-
+    updateUnButton();
     triggerEvent("onReady");
   }
 
@@ -447,6 +447,11 @@ function FlatpickrInstance(
       bind(self.daysContainer, "mousedown", onClick(selectDate));
     }
 
+    if(self.unbuttonContainer !== undefined){
+      bind(self.unYearButton, "mousedown", onUNButtonClick);
+      bind(self.unMonthButton, "mousedown", onUNButtonClick);
+      bind(self.unDayButton, "mousedown", onUNButtonClick);
+    }
     if (
       self.timeContainer !== undefined &&
       self.minuteElement !== undefined &&
@@ -503,6 +508,7 @@ function FlatpickrInstance(
       if (jumpTo !== undefined) {
         self.currentYear = jumpTo.getFullYear();
         self.currentMonth = jumpTo.getMonth();
+        updateUnButton();
       }
     } catch (e) {
       /* istanbul ignore next */
@@ -523,6 +529,20 @@ function FlatpickrInstance(
     }
 
     self.redraw();
+  }
+  function updateUnButton(){
+    if(self.config.showUnButtons){
+      self.unYearButton.textContent = `UN/UN/UN`;
+      self.unMonthButton.textContent = `${self.currentYear}/UN/UN`;
+      self.unDayButton.textContent = `${self.currentYear}/${(self.currentMonth + 1).toString().padStart( 2, '0')}/UN`;
+    }
+  }
+  function onUNButtonClick(e: MouseEvent){
+    var clickButton:HTMLSpanElement = e.target as HTMLSpanElement;
+    if(clickButton.textContent !== null){
+      self.input.value = clickButton.textContent;
+    }
+    focusAndClose();
   }
 
   /**
@@ -601,6 +621,10 @@ function FlatpickrInstance(
       self.rContainer.appendChild(self.daysContainer);
       self.innerContainer.appendChild(self.rContainer);
       fragment.appendChild(self.innerContainer);
+      if(self.config.showUnButtons){
+        fragment.appendChild(buildFooterButtons());
+      }
+
     }
 
     if (self.config.enableTime) {
@@ -765,6 +789,24 @@ function FlatpickrInstance(
       }
     }
     return undefined;
+  }
+  function buildFooterButtons() {
+    self.unbuttonContainer = createElement<HTMLDivElement>("div", "flatpickr-unButtonContainer");
+    self.unYearButton = createElement<HTMLSpanElement>("span", "flatpickr-button");
+    self.unMonthButton = createElement<HTMLSpanElement>("span", "flatpickr-button");
+    self.unDayButton = createElement<HTMLSpanElement>("span", "flatpickr-button");
+ 
+    if(self.config.unDateformat == "month"){
+      self.unYearButton.hidden = true;
+    }
+    if(self.config.unDateformat == "day"){
+      self.unYearButton.hidden = true;
+      self.unMonthButton.hidden = true;
+    }
+    self.unbuttonContainer.appendChild(self.unYearButton);
+    self.unbuttonContainer.appendChild(self.unMonthButton);
+    self.unbuttonContainer.appendChild(self.unDayButton);
+    return self.unbuttonContainer;
   }
 
   function getNextAvailableDay(current: DayElement, delta: number) {
@@ -1291,7 +1333,7 @@ function FlatpickrInstance(
     }
 
     buildDays();
-
+    updateUnButton();
     triggerEvent("onMonthChange");
     updateNavigationCurrentMonth();
   }
@@ -1507,6 +1549,7 @@ function FlatpickrInstance(
 
     if (isNewYear) {
       self.redraw();
+      updateUnButton();
       triggerEvent("onYearChange");
       buildMonthSwitch();
     }

@@ -72,6 +72,8 @@ export interface BaseOptions {
     time_24hr: boolean;
     weekNumbers: boolean;
     wrap: boolean;
+    showUnButtons: boolean;
+    unDateformat: string;
 }
 export declare type Options = Partial<BaseOptions>;
 export interface ParsedOptions {
@@ -142,5 +144,7 @@ export interface ParsedOptions {
     time_24hr: boolean;
     weekNumbers: boolean;
     wrap: boolean;
+    showUnButtons: boolean;
+    unDateformat: string;
 }
 export declare const defaults: ParsedOptions;

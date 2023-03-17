@@ -605,6 +605,25 @@ span.flatpickr-weekday
   padding 0
   box-sizing border-box
 
+.flatpickr-unButtonContainer
+  padding: 1px
+  display block
+  display flex
+  box-sizing border-box
+  overflow: hidden
+  -webkit-justify-content: space-around
+  justify-content: space-around;
+  if $noCalendarBorder is defined
+    background $calendarBackground
+    border-bottom 1px solid $calendarBorderColor
+
+.flatpickr-button
+  padding 0 4px 0 4px
+  border-width: 1px
+  border-radius:  3px
+  border-color: white
+  background #6c757d
+  color #fff
 
 .flatpickr-time
   text-align center

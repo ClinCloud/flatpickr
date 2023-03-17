@@ -143,7 +143,9 @@
       static: false,
       time_24hr: false,
       weekNumbers: false,
-      wrap: false
+      wrap: false,
+      showUnButtons: false,
+      unDateformat: "year"
   };
 
   var english = {

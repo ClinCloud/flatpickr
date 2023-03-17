@@ -663,6 +663,30 @@ span.flatpickr-weekday {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.flatpickr-unButtonContainer {
+  padding: 1px;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #fff;
+  border-bottom: 1px solid rgba(72,72,72,0.1);
+}
+.flatpickr-button {
+  padding: 0 4px 0 4px;
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: #fff;
+  background: #6c757d;
+  color: #fff;
+}
 .flatpickr-time {
   text-align: center;
   outline: 0;

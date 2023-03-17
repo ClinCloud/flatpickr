@@ -116,7 +116,9 @@
         static: false,
         time_24hr: false,
         weekNumbers: false,
-        wrap: false
+        wrap: false,
+        showUnButtons: false,
+        unDateformat: "year"
     };
 
     var english = {
@@ -617,6 +619,7 @@
             if (!self.isMobile && isSafari) {
                 positionCalendar();
             }
+            updateUnButton();
             triggerEvent("onReady");
         }
         function bindToInstance(fn) {
@@ -862,6 +865,11 @@
                 bind(self.monthNav, ["keyup", "increment"], onYearInput);
                 bind(self.daysContainer, "mousedown", onClick(selectDate));
             }
+            if (self.unbuttonContainer !== undefined) {
+                bind(self.unYearButton, "mousedown", onUNButtonClick);
+                bind(self.unMonthButton, "mousedown", onUNButtonClick);
+                bind(self.unDayButton, "mousedown", onUNButtonClick);
+            }
             if (self.timeContainer !== undefined &&
                 self.minuteElement !== undefined &&
                 self.hourElement !== undefined) {
@@ -902,6 +910,7 @@
                 if (jumpTo !== undefined) {
                     self.currentYear = jumpTo.getFullYear();
                     self.currentMonth = jumpTo.getMonth();
+                    updateUnButton();
                 }
             }
             catch (e) {
@@ -918,6 +927,20 @@
                 triggerEvent("onMonthChange");
             }
             self.redraw();
+        }
+        function updateUnButton() {
+            if (self.config.showUnButtons) {
+                self.unYearButton.textContent = "UN/UN/UN";
+                self.unMonthButton.textContent = self.currentYear + "/UN/UN";
+                self.unDayButton.textContent = self.currentYear + "/" + (self.currentMonth + 1).toString().padStart(2, '0') + "/UN";
+            }
+        }
+        function onUNButtonClick(e) {
+            var clickButton = e.target;
+            if (clickButton.textContent !== null) {
+                self.input.value = clickButton.textContent;
+            }
+            focusAndClose();
         }
         /**
          * The up/down arrow handler for time inputs
@@ -967,6 +990,9 @@
                 self.rContainer.appendChild(self.daysContainer);
                 self.innerContainer.appendChild(self.rContainer);
                 fragment.appendChild(self.innerContainer);
+                if (self.config.showUnButtons) {
+                    fragment.appendChild(buildFooterButtons());
+                }
             }
             if (self.config.enableTime) {
                 fragment.appendChild(buildTime());
@@ -1061,6 +1087,23 @@
                 }
             }
             return undefined;
+        }
+        function buildFooterButtons() {
+            self.unbuttonContainer = createElement("div", "flatpickr-unButtonContainer");
+            self.unYearButton = createElement("span", "flatpickr-button");
+            self.unMonthButton = createElement("span", "flatpickr-button");
+            self.unDayButton = createElement("span", "flatpickr-button");
+            if (self.config.unDateformat == "month") {
+                self.unYearButton.hidden = true;
+            }
+            if (self.config.unDateformat == "day") {
+                self.unYearButton.hidden = true;
+                self.unMonthButton.hidden = true;
+            }
+            self.unbuttonContainer.appendChild(self.unYearButton);
+            self.unbuttonContainer.appendChild(self.unMonthButton);
+            self.unbuttonContainer.appendChild(self.unDayButton);
+            return self.unbuttonContainer;
         }
         function getNextAvailableDay(current, delta) {
             var givenMonth = current.className.indexOf("Month") === -1
@@ -1375,6 +1418,7 @@
                 buildMonthSwitch();
             }
             buildDays();
+            updateUnButton();
             triggerEvent("onMonthChange");
             updateNavigationCurrentMonth();
         }
@@ -1547,6 +1591,7 @@
             }
             if (isNewYear) {
                 self.redraw();
+                updateUnButton();
                 triggerEvent("onYearChange");
                 buildMonthSwitch();
             }

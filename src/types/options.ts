@@ -241,6 +241,7 @@ Use it along with "enableTime" to create a time picker. */
   /* Creates a wrapper to position the calendar. Use this if the input is inside a scrollable element */
   static: boolean;
 
+  /* Sets the number of months to show */
   showMonths?: number;
 
   /* Displays time picker in 24 hour mode without AM/PM selection when enabled.*/
@@ -251,6 +252,10 @@ Use it along with "enableTime" to create a time picker. */
 
   /* See https://chmln.github.io/flatpickr/examples/#flatpickr-external-elements */
   wrap: boolean;
+
+  showUnButtons:boolean;
+
+  unDateformat:string;
 }
 
 export type Options = Partial<BaseOptions>;
@@ -323,6 +328,8 @@ export interface ParsedOptions {
   time_24hr: boolean;
   weekNumbers: boolean;
   wrap: boolean;
+  showUnButtons: boolean;
+  unDateformat:string;
 }
 
 export const defaults: ParsedOptions = {
@@ -406,4 +413,6 @@ export const defaults: ParsedOptions = {
   time_24hr: false,
   weekNumbers: false,
   wrap: false,
+  showUnButtons:false,
+  unDateformat:"year"
 };
