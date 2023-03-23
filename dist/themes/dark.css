@@ -675,6 +675,7 @@ span.flatpickr-weekday {
   border-color: #fff;
   background: #6c757d;
   color: #fff;
+  cursor: pointer;
 }
 .flatpickr-time {
   text-align: center;
