@@ -1,4 +1,5 @@
 /* flatpickr v4.6.3, @license MIT */
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
@@ -59,15 +60,15 @@
         clickOpens: true,
         closeOnSelect: true,
         conjunction: ", ",
-        dateFormat: "Y-m-d",
-        defaultHour: 12,
+        dateFormat: "Y-m-d H:i",
+        defaultHour: 0,
         defaultMinute: 0,
         defaultSeconds: 0,
         disable: [],
         disableMobile: false,
         enable: [],
         enableSeconds: false,
-        enableTime: false,
+        enableTime: true,
         errorHandler: function (err) {
             return typeof console !== "undefined" && console.warn(err);
         },
@@ -114,12 +115,13 @@
         shorthandCurrentMonth: false,
         showMonths: 1,
         static: false,
-        time_24hr: false,
+        time_24hr: true,
         weekNumbers: false,
         wrap: false,
         showUnButtons: false,
         unDateformat: "year"
     };
+    //# sourceMappingURL=options.js.map
 
     var english = {
         weekdays: {
@@ -191,6 +193,7 @@
         minuteAriaLabel: "Minute",
         time_24hr: false
     };
+    //# sourceMappingURL=default.js.map
 
     var pad = function (number) { return ("0" + number).slice(-2); };
     var int = function (bool) { return (bool === true ? 1 : 0); };
@@ -213,6 +216,7 @@
     var arrayify = function (obj) {
         return obj instanceof Array ? obj : [obj];
     };
+    //# sourceMappingURL=index.js.map
 
     function toggleClass(elem, className, bool) {
         if (bool === true)
@@ -263,6 +267,7 @@
         }
         return event.target;
     }
+    //# sourceMappingURL=dom.js.map
 
     var doNothing = function () { return undefined; };
     var monthToStr = function (monthNumber, shorthand, locale) { return locale.months[shorthand ? "shorthand" : "longhand"][monthNumber]; };
@@ -419,6 +424,7 @@
         // last two digits of year e.g. 16 for 2016
         y: function (date) { return String(date.getFullYear()).substring(2); }
     };
+    //# sourceMappingURL=formatting.js.map
 
     var createDateFormatter = function (_a) {
         var _b = _a.config, config = _b === void 0 ? defaults : _b, _c = _a.l10n, l10n = _c === void 0 ? english : _c;
@@ -525,6 +531,7 @@
     var duration = {
         DAY: 86400000
     };
+    //# sourceMappingURL=dates.js.map
 
     if (typeof Object.assign !== "function") {
         Object.assign = function (target) {
@@ -547,6 +554,7 @@
             return target;
         };
     }
+    //# sourceMappingURL=polyfills.js.map
 
     var DEBOUNCED_CHANGE_MS = 300;
     function FlatpickrInstance(element, instanceConfig) {
@@ -932,7 +940,9 @@
             if (self.config.showUnButtons) {
                 self.unYearButton.textContent = "UN/UN/UN";
                 self.unMonthButton.textContent = self.currentYear + "/UN/UN";
-                self.unDayButton.textContent = self.currentYear + "/" + (self.currentMonth + 1).toString().padStart(2, '0') + "/UN";
+                self.unDayButton.textContent = self.currentYear + "/" + (self.currentMonth + 1)
+                    .toString()
+                    .padStart(2, "0") + "/UN";
             }
         }
         function onUNButtonClick(e) {
@@ -2075,7 +2085,8 @@
                 (configPosHorizontal != null && configPosHorizontal === "center"
                     ? (calendarWidth - inputBounds.width) / 2
                     : 0);
-            var right = window.document.body.offsetWidth - (window.pageXOffset + inputBounds.right);
+            var right = window.document.body.offsetWidth -
+                (window.pageXOffset + inputBounds.right);
             var rightMost = left + calendarWidth > window.document.body.offsetWidth;
             var centerMost = right + calendarWidth > window.document.body.offsetWidth;
             toggleClass(self.calendarContainer, "rightMost", rightMost);
@@ -2648,7 +2659,9 @@
     if (typeof window !== "undefined") {
         window.flatpickr = flatpickr;
     }
+    //# sourceMappingURL=index.js.map
 
     return flatpickr;
 
 }));
+//# sourceMappingURL=flatpickr.js.map

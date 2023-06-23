@@ -80,7 +80,8 @@
                     month.tabIndex = -1;
                     month.addEventListener("click", selectMonth);
                     self.monthsContainer.appendChild(month);
-                    if ((fp.config.minDate && month.dateObj < fp.config.minDate) || (fp.config.maxDate && month.dateObj > fp.config.maxDate)) {
+                    if ((fp.config.minDate && month.dateObj < fp.config.minDate) ||
+                        (fp.config.maxDate && month.dateObj > fp.config.maxDate)) {
                         month.classList.add("disabled");
                     }
                 }
@@ -117,7 +118,8 @@
                     var months = fp.rContainer.querySelectorAll(".flatpickr-monthSelect-month");
                     months.forEach(function (month) {
                         month.dateObj.setFullYear(fp.currentYear);
-                        if ((fp.config.minDate && month.dateObj < fp.config.minDate) || (fp.config.maxDate && month.dateObj > fp.config.maxDate)) {
+                        if ((fp.config.minDate && month.dateObj < fp.config.minDate) ||
+                            (fp.config.maxDate && month.dateObj > fp.config.maxDate)) {
                             month.classList.add("disabled");
                         }
                         else {
@@ -129,7 +131,8 @@
             function selectMonth(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                if (e.target instanceof Element && !e.target.classList.contains("disabled")) {
+                if (e.target instanceof Element &&
+                    !e.target.classList.contains("disabled")) {
                     setMonth(e.target.dateObj);
                     fp.close();
                 }
@@ -201,3 +204,4 @@
     return monthSelectPlugin;
 
 }));
+//# sourceMappingURL=index.js.map

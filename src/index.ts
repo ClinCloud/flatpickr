@@ -447,7 +447,7 @@ function FlatpickrInstance(
       bind(self.daysContainer, "mousedown", onClick(selectDate));
     }
 
-    if(self.unbuttonContainer !== undefined){
+    if (self.unbuttonContainer !== undefined) {
       bind(self.unYearButton, "mousedown", onUNButtonClick);
       bind(self.unMonthButton, "mousedown", onUNButtonClick);
       bind(self.unDayButton, "mousedown", onUNButtonClick);
@@ -530,16 +530,20 @@ function FlatpickrInstance(
 
     self.redraw();
   }
-  function updateUnButton(){
-    if(self.config.showUnButtons){
+  function updateUnButton() {
+    if (self.config.showUnButtons) {
       self.unYearButton.textContent = `UN/UN/UN`;
       self.unMonthButton.textContent = `${self.currentYear}/UN/UN`;
-      self.unDayButton.textContent = `${self.currentYear}/${(self.currentMonth + 1).toString().padStart( 2, '0')}/UN`;
+      self.unDayButton.textContent = `${self.currentYear}/${(
+        self.currentMonth + 1
+      )
+        .toString()
+        .padStart(2, "0")}/UN`;
     }
   }
-  function onUNButtonClick(e: MouseEvent){
-    var clickButton:HTMLSpanElement = e.target as HTMLSpanElement;
-    if(clickButton.textContent !== null){
+  function onUNButtonClick(e: MouseEvent) {
+    var clickButton: HTMLSpanElement = e.target as HTMLSpanElement;
+    if (clickButton.textContent !== null) {
       self.input.value = clickButton.textContent;
     }
     focusAndClose();
@@ -621,10 +625,9 @@ function FlatpickrInstance(
       self.rContainer.appendChild(self.daysContainer);
       self.innerContainer.appendChild(self.rContainer);
       fragment.appendChild(self.innerContainer);
-      if(self.config.showUnButtons){
+      if (self.config.showUnButtons) {
         fragment.appendChild(buildFooterButtons());
       }
-
     }
 
     if (self.config.enableTime) {
@@ -791,15 +794,27 @@ function FlatpickrInstance(
     return undefined;
   }
   function buildFooterButtons() {
-    self.unbuttonContainer = createElement<HTMLDivElement>("div", "flatpickr-unButtonContainer");
-    self.unYearButton = createElement<HTMLSpanElement>("span", "flatpickr-button");
-    self.unMonthButton = createElement<HTMLSpanElement>("span", "flatpickr-button");
-    self.unDayButton = createElement<HTMLSpanElement>("span", "flatpickr-button");
- 
-    if(self.config.unDateformat == "month"){
+    self.unbuttonContainer = createElement<HTMLDivElement>(
+      "div",
+      "flatpickr-unButtonContainer"
+    );
+    self.unYearButton = createElement<HTMLSpanElement>(
+      "span",
+      "flatpickr-button"
+    );
+    self.unMonthButton = createElement<HTMLSpanElement>(
+      "span",
+      "flatpickr-button"
+    );
+    self.unDayButton = createElement<HTMLSpanElement>(
+      "span",
+      "flatpickr-button"
+    );
+
+    if (self.config.unDateformat == "month") {
       self.unYearButton.hidden = true;
     }
-    if(self.config.unDateformat == "day"){
+    if (self.config.unDateformat == "day") {
       self.unYearButton.hidden = true;
       self.unMonthButton.hidden = true;
     }
@@ -1648,13 +1663,13 @@ function FlatpickrInstance(
 
     if (e.keyCode === 13 && isInput) {
       if (allowInput) {
-        if(allowEnter) {
+        if (allowEnter) {
           self.setDate(
-              self._input.value,
-              true,
-              e.target === self.altInput
-                  ? self.config.altFormat
-                  : self.config.dateFormat
+            self._input.value,
+            true,
+            e.target === self.altInput
+              ? self.config.altFormat
+              : self.config.dateFormat
           );
         }
         return (e.target as HTMLElement).blur();
@@ -2207,7 +2222,9 @@ function FlatpickrInstance(
       (configPosHorizontal != null && configPosHorizontal === "center"
         ? (calendarWidth - inputBounds.width) / 2
         : 0);
-    const right = window.document.body.offsetWidth - (window.pageXOffset + inputBounds.right);
+    const right =
+      window.document.body.offsetWidth -
+      (window.pageXOffset + inputBounds.right);
     const rightMost = left + calendarWidth > window.document.body.offsetWidth;
     const centerMost = right + calendarWidth > window.document.body.offsetWidth;
 

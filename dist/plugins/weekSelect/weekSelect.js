@@ -84,3 +84,4 @@
   return weekSelectPlugin;
 
 }));
+//# sourceMappingURL=weekSelect.js.map
