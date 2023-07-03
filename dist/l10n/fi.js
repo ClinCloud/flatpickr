@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Finnish = {
       firstDayOfWeek: 1,
@@ -21,7 +21,7 @@
               "Torstai",
               "Perjantai",
               "Lauantai",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -51,12 +51,12 @@
               "Lokakuu",
               "Marraskuu",
               "Joulukuu",
-          ]
+          ],
       },
       ordinal: function () {
           return ".";
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.fi = Finnish;
   var fi = fp.l10ns;
@@ -67,4 +67,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=fi.js.map

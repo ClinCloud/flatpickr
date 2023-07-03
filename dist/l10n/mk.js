@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Macedonian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Четврток",
               "Петок",
               "Сабота",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,12 +50,12 @@
               "Октомври",
               "Ноември",
               "Декември",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       weekAbbreviation: "Нед.",
       rangeSeparator: " до ",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.mk = Macedonian;
   var mk = fp.l10ns;
@@ -66,4 +66,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=mk.js.map

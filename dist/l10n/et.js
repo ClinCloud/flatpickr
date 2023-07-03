@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Estonian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Neljapäev",
               "Reede",
               "Laupäev",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Oktoober",
               "November",
               "Detsember",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -60,7 +60,7 @@
       rangeSeparator: " kuni ",
       scrollTitle: "Keri, et suurendada",
       toggleTitle: "Klõpsa, et vahetada",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.et = Estonian;
   var et = fp.l10ns;
@@ -71,4 +71,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=et.js.map

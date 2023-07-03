@@ -76,7 +76,7 @@
                       fp.loadedPlugins.push("weekSelect");
                   },
               ],
-              onDestroy: onDestroy
+              onDestroy: onDestroy,
           };
       };
   }
@@ -84,4 +84,3 @@
   return weekSelectPlugin;
 
 }));
-//# sourceMappingURL=weekSelect.js.map

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Hindi = {
       weekdays: {
@@ -20,7 +20,7 @@
               "गुरुवार",
               "शुक्रवार",
               "शनिवार",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,8 +50,8 @@
               "अक्टूबर",
               "नवम्बर",
               "दिसम्बर",
-          ]
-      }
+          ],
+      },
   };
   fp.l10ns.hi = Hindi;
   var hi = fp.l10ns;
@@ -62,4 +62,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=hi.js.map

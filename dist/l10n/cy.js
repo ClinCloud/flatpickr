@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Welsh = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Dydd Iau",
               "Dydd Gwener",
               "Dydd Sadwrn",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Hydref",
               "Tachwedd",
               "Rhagfyr",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function (nth) {
@@ -80,7 +80,7 @@
           // Inconclusive.
           return "";
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.cy = Welsh;
   var cy = fp.l10ns;
@@ -91,4 +91,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=cy.js.map

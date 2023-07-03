@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Albanian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "E Enjte",
               "E Premte",
               "E Shtunë",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,9 +50,9 @@
               "Tetor",
               "Nëntor",
               "Dhjetor",
-          ]
+          ],
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.sq = Albanian;
   var sq = fp.l10ns;
@@ -63,4 +63,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=sq.js.map

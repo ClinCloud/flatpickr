@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Faroese = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Hósdagur",
               "Fríggjadagur",
               "Leygardagur",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Oktobur",
               "Novembur",
               "Desembur",
-          ]
+          ],
       },
       ordinal: function () {
           return ".";
@@ -61,7 +61,7 @@
       scrollTitle: "Rulla fyri at broyta",
       toggleTitle: "Trýst fyri at skifta",
       yearAriaLabel: "Ár",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.fo = Faroese;
   var fo = fp.l10ns;
@@ -72,4 +72,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=fo.js.map

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var German = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Donnerstag",
               "Freitag",
               "Samstag",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,14 +50,14 @@
               "Oktober",
               "November",
               "Dezember",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       weekAbbreviation: "KW",
       rangeSeparator: " bis ",
       scrollTitle: "Zum Ändern scrollen",
       toggleTitle: "Zum Umschalten klicken",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.de = German;
   var de = fp.l10ns;
@@ -68,4 +68,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=de.js.map

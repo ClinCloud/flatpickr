@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Lithuanian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Ketvirtadienis",
               "Penktadienis",
               "Šeštadienis",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Spalis",
               "Lapkritis",
               "Gruodis",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -59,7 +59,7 @@
       weekAbbreviation: "Sav",
       scrollTitle: "Keisti laiką pelės rateliu",
       toggleTitle: "Perjungti laiko formatą",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.lt = Lithuanian;
   var lt = fp.l10ns;
@@ -70,4 +70,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=lt.js.map

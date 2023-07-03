@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Japanese = {
       weekdays: {
@@ -20,7 +20,7 @@
               "木曜日",
               "金曜日",
               "土曜日",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,11 +50,11 @@
               "10月",
               "11月",
               "12月",
-          ]
+          ],
       },
       time_24hr: true,
       rangeSeparator: " から ",
-      firstDayOfWeek: 1
+      firstDayOfWeek: 1,
   };
   fp.l10ns.ja = Japanese;
   var ja = fp.l10ns;
@@ -65,4 +65,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=ja.js.map

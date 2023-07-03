@@ -139,11 +139,7 @@ async function transpileStyle(src: string, compress = false) {
     } as any)
       .include(`${__dirname}/src/style`)
       .include(`${__dirname}/src/style/themes`)
-      .use(
-        stylusAutoprefixer({
-          browsers: pkg.browserslist,
-        })
-      )
+      .use(stylusAutoprefixer())
       .render((err: Error | undefined, css: string) =>
         !err ? resolve(css) : reject(err)
       );

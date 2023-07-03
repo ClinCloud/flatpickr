@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Serbian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Četvrtak",
               "Petak",
               "Subota",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,12 +50,12 @@
               "Oktobar",
               "Novembar",
               "Decembar",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       weekAbbreviation: "Ned.",
       rangeSeparator: " do ",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.sr = Serbian;
   var sr = fp.l10ns;
@@ -66,4 +66,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=sr.js.map

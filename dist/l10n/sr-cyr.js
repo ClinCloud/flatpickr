@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var SerbianCyrillic = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Четвртак",
               "Петак",
               "Субота",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,11 +50,11 @@
               "Октобар",
               "Новембар",
               "Децембар",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       weekAbbreviation: "Нед.",
-      rangeSeparator: " до "
+      rangeSeparator: " до ",
   };
   fp.l10ns.sr = SerbianCyrillic;
   var srCyr = fp.l10ns;
@@ -65,4 +65,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=sr-cyr.js.map

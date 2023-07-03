@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Georgian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "ხუთშაბათი",
               "პარასკევი",
               "შაბათი",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "ოქტომბერი",
               "ნოემბერი",
               "დეკემბერი",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -62,7 +62,7 @@
       toggleTitle: "დააკლიკეთ გადართვისთვის",
       amPM: ["AM", "PM"],
       yearAriaLabel: "წელი",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.ka = Georgian;
   var ka = fp.l10ns;
@@ -73,4 +73,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=ka.js.map

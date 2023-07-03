@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Ukrainian = {
       firstDayOfWeek: 1,
@@ -21,7 +21,7 @@
               "Четвер",
               "П'ятниця",
               "Субота",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -51,9 +51,9 @@
               "Жовтень",
               "Листопад",
               "Грудень",
-          ]
+          ],
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.uk = Ukrainian;
   var uk = fp.l10ns;
@@ -64,4 +64,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=uk.js.map

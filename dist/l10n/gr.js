@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Greek = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Πέμπτη",
               "Παρασκευή",
               "Σάββατο",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Οκτώβριος",
               "Νοέμβριος",
               "Δεκέμβριος",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -60,7 +60,7 @@
       rangeSeparator: " έως ",
       scrollTitle: "Μετακυλήστε για προσαύξηση",
       toggleTitle: "Κάντε κλικ για αλλαγή",
-      amPM: ["ΠΜ", "ΜΜ"]
+      amPM: ["ΠΜ", "ΜΜ"],
   };
   fp.l10ns.gr = Greek;
   var gr = fp.l10ns;
@@ -71,4 +71,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=gr.js.map

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Catalan = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Dijous",
               "Divendres",
               "Dissabte",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Octubre",
               "Novembre",
               "Desembre",
-          ]
+          ],
       },
       ordinal: function (nth) {
           var s = nth % 100;
@@ -70,7 +70,7 @@
           }
       },
       firstDayOfWeek: 1,
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.cat = Catalan;
   var cat = fp.l10ns;
@@ -81,4 +81,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=cat.js.map

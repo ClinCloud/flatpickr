@@ -45,7 +45,7 @@ export interface Formatting {
     formats: Formats;
     tokenRegex: TokenRegex;
 }
-export declare type Instance = Elements & Formatting & {
+export type Instance = Elements & Formatting & {
     minRangeDate?: Date;
     maxRangeDate?: Date;
     now: Date;
@@ -116,7 +116,7 @@ export interface FlatpickrFn {
     formatDate: (date: Date, format: string) => string;
     compareDates: (date1: Date, date2: Date, timeless?: boolean) => number;
 }
-export declare type DayElement = HTMLSpanElement & {
+export type DayElement = HTMLSpanElement & {
     dateObj: Date;
     $i: number;
 };

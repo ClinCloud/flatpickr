@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Swedish = {
       firstDayOfWeek: 1,
@@ -22,7 +22,7 @@
               "Torsdag",
               "Fredag",
               "Lördag",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -52,12 +52,12 @@
               "Oktober",
               "November",
               "December",
-          ]
+          ],
       },
       time_24hr: true,
       ordinal: function () {
           return ".";
-      }
+      },
   };
   fp.l10ns.sv = Swedish;
   var sv = fp.l10ns;
@@ -68,4 +68,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=sv.js.map

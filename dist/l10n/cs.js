@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Czech = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Čtvrtek",
               "Pátek",
               "Sobota",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Říjen",
               "Listopad",
               "Prosinec",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -62,7 +62,7 @@
       toggleTitle: "Přepnout dopoledne/odpoledne",
       amPM: ["dop.", "odp."],
       yearAriaLabel: "Rok",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.cs = Czech;
   var cs = fp.l10ns;
@@ -73,4 +73,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=cs.js.map

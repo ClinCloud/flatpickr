@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Belarusian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Чацвер",
               "Пятніца",
               "Субота",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Кастрычнік",
               "Лістапад",
               "Снежань",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -62,7 +62,7 @@
       toggleTitle: "Націсніце для пераключэння",
       amPM: ["ДП", "ПП"],
       yearAriaLabel: "Год",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.be = Belarusian;
   var be = fp.l10ns;
@@ -73,4 +73,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=be.js.map

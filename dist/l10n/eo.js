@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Esperanto = {
       firstDayOfWeek: 1,
@@ -25,7 +25,7 @@
               "ĵaŭdo",
               "vendredo",
               "sabato",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -55,12 +55,12 @@
               "oktobro",
               "novembro",
               "decembro",
-          ]
+          ],
       },
       ordinal: function () {
           return "-a";
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.eo = Esperanto;
   var eo = fp.l10ns;
@@ -71,4 +71,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=eo.js.map

@@ -15,7 +15,7 @@
               "Thursday",
               "Friday",
               "Saturday",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -45,7 +45,7 @@
               "October",
               "November",
               "December",
-          ]
+          ],
       },
       daysInMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
       firstDayOfWeek: 0,
@@ -72,7 +72,7 @@
       yearAriaLabel: "Year",
       hourAriaLabel: "Hour",
       minuteAriaLabel: "Minute",
-      time_24hr: true
+      time_24hr: true,
   };
 
   exports.default = english;
@@ -81,4 +81,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=default.js.map

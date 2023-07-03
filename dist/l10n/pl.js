@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Polish = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Czwartek",
               "Piątek",
               "Sobota",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Październik",
               "Listopad",
               "Grudzień",
-          ]
+          ],
       },
       rangeSeparator: " do ",
       weekAbbreviation: "tydz.",
@@ -60,7 +60,7 @@
       time_24hr: true,
       ordinal: function () {
           return ".";
-      }
+      },
   };
   fp.l10ns.pl = Polish;
   var pl = fp.l10ns;
@@ -71,4 +71,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=pl.js.map

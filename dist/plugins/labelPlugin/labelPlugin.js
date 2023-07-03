@@ -21,7 +21,7 @@
                       fp.altInput.id = id;
                   }
                   fp.loadedPlugins.push("labelPlugin");
-              }
+              },
           };
       };
   }
@@ -29,4 +29,3 @@
   return labelPlugin;
 
 }));
-//# sourceMappingURL=labelPlugin.js.map

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Turkish = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Perşembe",
               "Cuma",
               "Cumartesi",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Ekim",
               "Kasım",
               "Aralık",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -61,7 +61,7 @@
       scrollTitle: "Artırmak için kaydırın",
       toggleTitle: "Aç/Kapa",
       amPM: ["ÖÖ", "ÖS"],
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.tr = Turkish;
   var tr = fp.l10ns;
@@ -72,4 +72,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=tr.js.map

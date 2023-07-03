@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Sinhala = {
       weekdays: {
@@ -20,7 +20,7 @@
               "බ්‍රහස්පතින්දා",
               "සිකුරාදා",
               "සෙනසුරාදා",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,9 +50,9 @@
               "ඔක්තෝබර්",
               "නොවැම්බර්",
               "දෙසැම්බර්",
-          ]
+          ],
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.si = Sinhala;
   var si = fp.l10ns;
@@ -63,4 +63,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=si.js.map

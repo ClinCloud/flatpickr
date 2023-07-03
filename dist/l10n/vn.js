@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Vietnamese = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Thứ năm",
               "Thứ sáu",
               "Thứ bảy",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,10 +50,10 @@
               "Tháng mười",
               "Tháng 11",
               "Tháng 12",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
-      rangeSeparator: " đến "
+      rangeSeparator: " đến ",
   };
   fp.l10ns.vn = Vietnamese;
   var vn = fp.l10ns;
@@ -64,4 +64,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=vn.js.map

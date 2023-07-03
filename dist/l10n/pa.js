@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Punjabi = {
       weekdays: {
@@ -20,7 +20,7 @@
               "ਵੀਰਵਾਰ",
               "ਸ਼ੁੱਕਰਵਾਰ",
               "ਸ਼ਨਿੱਚਰਵਾਰ",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,9 +50,9 @@
               "ਅਕਤੂਬਰ",
               "ਨਵੰਬਰ",
               "ਦਸੰਬਰ",
-          ]
+          ],
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.pa = Punjabi;
   var pa = fp.l10ns;
@@ -63,4 +63,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=pa.js.map

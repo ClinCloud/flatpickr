@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Malaysian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Khamis",
               "Jumaat",
               "Sabtu",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,12 +50,12 @@
               "Oktober",
               "November",
               "Disember",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
           return "";
-      }
+      },
   };
   var ms = fp.l10ns;
 
@@ -65,4 +65,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=ms.js.map

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Italian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Giovedì",
               "Venerdì",
               "Sabato",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Ottobre",
               "Novembre",
               "Dicembre",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () { return "°"; },
@@ -58,7 +58,7 @@
       weekAbbreviation: "Se",
       scrollTitle: "Scrolla per aumentare",
       toggleTitle: "Clicca per cambiare",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.it = Italian;
   var it = fp.l10ns;
@@ -69,4 +69,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=it.js.map

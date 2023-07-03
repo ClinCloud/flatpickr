@@ -10,7 +10,7 @@
   var scroll = function (e) {
       e.preventDefault();
       var ev = new CustomEvent("increment", {
-          bubbles: true
+          bubbles: true,
       });
       ev.delta = delta(e);
       e.target.dispatchEvent(ev);
@@ -48,7 +48,7 @@
                   fp.monthElements.forEach(function (monthElem) {
                       return monthElem.removeEventListener("wheel", monthScroller);
                   });
-              }
+              },
           };
       };
   }
@@ -56,4 +56,3 @@
   return scrollPlugin;
 
 }));
-//# sourceMappingURL=scrollPlugin.js.map

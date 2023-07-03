@@ -1,5 +1,5 @@
 import { Plugin } from "../../types/options";
-export declare type PlusWeeks = {
+export type PlusWeeks = {
     weekStartDay: Date;
     weekEndDay: Date;
 };

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Persian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "پنچ‌شنبه",
               "جمعه",
               "شنبه",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,12 +50,12 @@
               "اکتبر",
               "نوامبر",
               "دسامبر",
-          ]
+          ],
       },
       firstDayOfWeek: 6,
       ordinal: function () {
           return "";
-      }
+      },
   };
   fp.l10ns.fa = Persian;
   var fa = fp.l10ns;
@@ -66,4 +66,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=fa.js.map

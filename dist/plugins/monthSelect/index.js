@@ -4,19 +4,19 @@
     (global = global || self, global.monthSelectPlugin = factory());
 }(this, function () { 'use strict';
 
-    /*! *****************************************************************************
-    Copyright (c) Microsoft Corporation. All rights reserved.
-    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-    this file except in compliance with the License. You may obtain a copy of the
-    License at http://www.apache.org/licenses/LICENSE-2.0
+    /******************************************************************************
+    Copyright (c) Microsoft Corporation.
 
-    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-    WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-    MERCHANTABLITY OR NON-INFRINGEMENT.
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
 
-    See the Apache Version 2.0 License for specific language governing permissions
-    and limitations under the License.
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
 
     var __assign = function() {
@@ -32,14 +32,15 @@
 
     var monthToStr = function (monthNumber, shorthand, locale) { return locale.months[shorthand ? "shorthand" : "longhand"][monthNumber]; };
 
+    // export type MonthElement = HTMLSpanElement & { dateObj: Date; $i: number };
     var defaultConfig = {
         shorthand: false,
         dateFormat: "F Y",
         altFormat: "F Y",
-        theme: "light"
+        theme: "light",
     };
     function monthSelectPlugin(pluginConfig) {
-        var config = __assign({}, defaultConfig, pluginConfig);
+        var config = __assign(__assign({}, defaultConfig), pluginConfig);
         return function (fp) {
             fp.config.dateFormat = config.dateFormat;
             fp.config.altFormat = config.altFormat;
@@ -71,7 +72,7 @@
                     return;
                 self.monthsContainer = fp._createElement("div", "flatpickr-monthSelect-months");
                 self.monthsContainer.tabIndex = -1;
-                fp.calendarContainer.classList.add("flatpickr-monthSelect-theme-" + config.theme);
+                fp.calendarContainer.classList.add("flatpickr-monthSelect-theme-".concat(config.theme));
                 for (var i = 0; i < 12; i++) {
                     var month = fp._createElement("span", "flatpickr-monthSelect-month");
                     month.dateObj = new Date(fp.currentYear, i);
@@ -94,7 +95,7 @@
                 for (var index = 0; index < currentlySelected.length; index++) {
                     currentlySelected[index].classList.remove("selected");
                 }
-                var month = fp.rContainer.querySelector(".flatpickr-monthSelect-month:nth-child(" + (fp.currentMonth + 1) + ")");
+                var month = fp.rContainer.querySelector(".flatpickr-monthSelect-month:nth-child(".concat(fp.currentMonth + 1, ")"));
                 if (month) {
                     month.classList.add("selected");
                 }
@@ -148,7 +149,7 @@
                 37: -1,
                 39: 1,
                 40: 3,
-                38: -3
+                38: -3,
             };
             function onKeyDown(_, __, ___, e) {
                 var shouldMove = shifts[e.keyCode] !== undefined;
@@ -196,7 +197,7 @@
                         fp.loadedPlugins.push("monthSelect");
                     },
                 ],
-                onDestroy: destroyPluginInstance
+                onDestroy: destroyPluginInstance,
             };
         };
     }
@@ -204,4 +205,3 @@
     return monthSelectPlugin;
 
 }));
-//# sourceMappingURL=index.js.map

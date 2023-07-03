@@ -1,15 +1,15 @@
 import { Instance } from "./instance";
 import { CustomLocale, key as LocaleKey, Locale } from "./locale";
-export declare type DateOption = Date | string | number;
-export declare type DateRangeLimit<D = DateOption> = {
+export type DateOption = Date | string | number;
+export type DateRangeLimit<D = DateOption> = {
     from: D;
     to: D;
 };
-export declare type DateLimit<D = DateOption> = D | DateRangeLimit<D> | ((date: Date) => boolean);
-export declare type Hook = (dates: Date[], currentDateString: string, self: Instance, data?: any) => void;
-export declare type HookKey = "onChange" | "onClose" | "onDayCreate" | "onDestroy" | "onKeyDown" | "onMonthChange" | "onOpen" | "onParseConfig" | "onReady" | "onValueUpdate" | "onYearChange" | "onPreCalendarPosition";
+export type DateLimit<D = DateOption> = D | DateRangeLimit<D> | ((date: Date) => boolean);
+export type Hook = (dates: Date[], currentDateString: string, self: Instance, data?: any) => void;
+export type HookKey = "onChange" | "onClose" | "onDayCreate" | "onDestroy" | "onKeyDown" | "onMonthChange" | "onOpen" | "onParseConfig" | "onReady" | "onValueUpdate" | "onYearChange" | "onPreCalendarPosition";
 export declare const HOOKS: HookKey[];
-export declare type Plugin<E = {}> = (fp: Instance & E) => Options;
+export type Plugin<E = {}> = (fp: Instance & E) => Options;
 export interface BaseOptions {
     allowInput: boolean;
     allowEnter: boolean;
@@ -75,7 +75,7 @@ export interface BaseOptions {
     showUnButtons: boolean;
     unDateformat: string;
 }
-export declare type Options = Partial<BaseOptions>;
+export type Options = Partial<BaseOptions>;
 export interface ParsedOptions {
     _disable: DateLimit<Date>[];
     _enable: DateLimit<Date>[];

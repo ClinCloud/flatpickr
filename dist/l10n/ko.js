@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Korean = {
       weekdays: {
@@ -20,7 +20,7 @@
               "목요일",
               "금요일",
               "토요일",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,12 +50,12 @@
               "10월",
               "11월",
               "12월",
-          ]
+          ],
       },
       ordinal: function () {
           return "일";
       },
-      rangeSeparator: " ~ "
+      rangeSeparator: " ~ ",
   };
   fp.l10ns.ko = Korean;
   var ko = fp.l10ns;
@@ -66,4 +66,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=ko.js.map

@@ -8,9 +8,5 @@ export interface Config {
 export interface ElementDate extends Element {
     dateObj: Date;
 }
-export declare type MonthElement = HTMLSpanElement & {
-    dateObj: Date;
-    $i: number;
-};
 declare function monthSelectPlugin(pluginConfig?: Partial<Config>): Plugin;
 export default monthSelectPlugin;

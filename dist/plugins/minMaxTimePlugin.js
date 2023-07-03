@@ -4,7 +4,7 @@
   (global = global || self, global.minMaxTimePlugin = factory());
 }(this, function () { 'use strict';
 
-  var pad = function (number) { return ("0" + number).slice(-2); };
+  var pad = function (number) { return "0".concat(number).slice(-2); };
   var int = function (bool) { return (bool === true ? 1 : 0); };
 
   var monthToStr = function (monthNumber, shorthand, locale) { return locale.months[shorthand ? "shorthand" : "longhand"][monthNumber]; };
@@ -69,7 +69,7 @@
       // number of the day of the week
       w: function (date) { return date.getDay(); },
       // last two digits of year e.g. 16 for 2016
-      y: function (date) { return String(date.getFullYear()).substring(2); }
+      y: function (date) { return String(date.getFullYear()).substring(2); },
   };
 
   var defaults = {
@@ -145,7 +145,7 @@
       weekNumbers: false,
       wrap: false,
       showUnButtons: false,
-      unDateformat: "year"
+      unDateformat: "year",
   };
 
   var english = {
@@ -159,7 +159,7 @@
               "Thursday",
               "Friday",
               "Saturday",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -189,7 +189,7 @@
               "October",
               "November",
               "December",
-          ]
+          ],
       },
       daysInMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
       firstDayOfWeek: 0,
@@ -216,7 +216,7 @@
       yearAriaLabel: "Year",
       hourAriaLabel: "Hour",
       minuteAriaLabel: "Minute",
-      time_24hr: true
+      time_24hr: true,
   };
 
   var createDateFormatter = function (_a) {
@@ -266,8 +266,8 @@
           tableDateFormat: config.tableDateFormat || "Y-m-d",
           defaults: {
               minTime: undefined,
-              maxTime: undefined
-          }
+              maxTime: undefined,
+          },
       };
       function findDateTimeLimit(date) {
           if (config.table !== undefined) {
@@ -281,7 +281,7 @@
                   state.formatDate = this.formatDate;
                   state.defaults = {
                       minTime: this.config.minTime && state.formatDate(this.config.minTime, "H:i"),
-                      maxTime: this.config.maxTime && state.formatDate(this.config.maxTime, "H:i")
+                      maxTime: this.config.maxTime && state.formatDate(this.config.maxTime, "H:i"),
                   };
                   fp.loadedPlugins.push("minMaxTime");
               },
@@ -305,7 +305,7 @@
                   else {
                       var newMinMax = state.defaults || {
                           minTime: undefined,
-                          maxTime: undefined
+                          maxTime: undefined,
                       };
                       this.set(newMinMax);
                       if (!latest)
@@ -319,7 +319,7 @@
                       }
                       //
                   }
-              }
+              },
           };
       };
   }
@@ -327,4 +327,3 @@
   return minMaxTimePlugin;
 
 }));
-//# sourceMappingURL=minMaxTimePlugin.js.map

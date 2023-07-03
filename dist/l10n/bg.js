@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Bulgarian = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Четвъртък",
               "Петък",
               "Събота",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,10 +50,10 @@
               "Октомври",
               "Ноември",
               "Декември",
-          ]
+          ],
       },
       time_24hr: true,
-      firstDayOfWeek: 1
+      firstDayOfWeek: 1,
   };
   fp.l10ns.bg = Bulgarian;
   var bg = fp.l10ns;
@@ -64,4 +64,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=bg.js.map

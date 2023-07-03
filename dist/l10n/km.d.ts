@@ -2,9 +2,12 @@ import { CustomLocale } from "../types/locale";
 export declare const Khmer: CustomLocale;
 declare const _default: {
     default?: CustomLocale | undefined;
+    id?: CustomLocale | undefined;
     hr?: CustomLocale | undefined;
     th?: CustomLocale | undefined;
     tr?: CustomLocale | undefined;
+    mn?: CustomLocale | undefined;
+    ms?: CustomLocale | undefined;
     ar?: CustomLocale | undefined;
     at?: CustomLocale | undefined;
     az?: CustomLocale | undefined;
@@ -29,7 +32,6 @@ declare const _default: {
     he?: CustomLocale | undefined;
     hi?: CustomLocale | undefined;
     hu?: CustomLocale | undefined;
-    id?: CustomLocale | undefined;
     is?: CustomLocale | undefined;
     it?: CustomLocale | undefined;
     ja?: CustomLocale | undefined;
@@ -40,8 +42,6 @@ declare const _default: {
     lt?: CustomLocale | undefined;
     lv?: CustomLocale | undefined;
     mk?: CustomLocale | undefined;
-    mn?: CustomLocale | undefined;
-    ms?: CustomLocale | undefined;
     my?: CustomLocale | undefined;
     nl?: CustomLocale | undefined;
     no?: CustomLocale | undefined;

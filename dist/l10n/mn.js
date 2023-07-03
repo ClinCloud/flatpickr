@@ -7,13 +7,13 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Mongolian = {
       firstDayOfWeek: 1,
       weekdays: {
           shorthand: ["Да", "Мя", "Лх", "Пү", "Ба", "Бя", "Ня"],
-          longhand: ["Даваа", "Мягмар", "Лхагва", "Пүрэв", "Баасан", "Бямба", "Ням"]
+          longhand: ["Даваа", "Мягмар", "Лхагва", "Пүрэв", "Баасан", "Бямба", "Ням"],
       },
       months: {
           shorthand: [
@@ -43,10 +43,10 @@
               "Аравдугаар сар",
               "Арваннэгдүгээр сар",
               "Арванхоёрдугаар сар",
-          ]
+          ],
       },
       rangeSeparator: "-с ",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.mn = Mongolian;
   var mn = fp.l10ns;
@@ -57,4 +57,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=mn.js.map

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Hungarian = {
       firstDayOfWeek: 1,
@@ -21,7 +21,7 @@
               "Csütörtök",
               "Péntek",
               "Szombat",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -51,7 +51,7 @@
               "Október",
               "November",
               "December",
-          ]
+          ],
       },
       ordinal: function () {
           return ".";
@@ -60,7 +60,7 @@
       scrollTitle: "Görgessen",
       toggleTitle: "Kattintson a váltáshoz",
       rangeSeparator: " - ",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.hu = Hungarian;
   var hu = fp.l10ns;
@@ -71,4 +71,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=hu.js.map

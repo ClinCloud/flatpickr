@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Bangla = {
       weekdays: {
@@ -20,7 +20,7 @@
               "বৃহস্পতিবার",
               "শুক্রবার",
               "শনিবার",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,8 +50,8 @@
               "অক্টোবর",
               "নভেম্বর",
               "ডিসেম্বর",
-          ]
-      }
+          ],
+      },
   };
   fp.l10ns.bn = Bangla;
   var bn = fp.l10ns;
@@ -62,4 +62,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=bn.js.map

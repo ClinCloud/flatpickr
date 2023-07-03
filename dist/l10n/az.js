@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Azerbaijan = {
       weekdays: {
@@ -20,7 +20,7 @@
               "Cümə axşamı",
               "Cümə",
               "Şənbə",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "Oktyabr",
               "Noyabr",
               "Dekabr",
-          ]
+          ],
       },
       firstDayOfWeek: 1,
       ordinal: function () {
@@ -61,7 +61,7 @@
       scrollTitle: "Artırmaq üçün sürüşdürün",
       toggleTitle: "Aç / Bağla",
       amPM: ["GƏ", "GS"],
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.az = Azerbaijan;
   var az = fp.l10ns;
@@ -72,4 +72,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=az.js.map

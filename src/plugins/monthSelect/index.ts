@@ -13,7 +13,7 @@ export interface ElementDate extends Element {
   dateObj: Date;
 }
 
-export type MonthElement = HTMLSpanElement & { dateObj: Date; $i: number };
+// export type MonthElement = HTMLSpanElement & { dateObj: Date; $i: number };
 
 const defaultConfig: Config = {
   shorthand: false,

@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Danish = {
       weekdays: {
@@ -20,7 +20,7 @@
               "torsdag",
               "fredag",
               "lørdag",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -50,7 +50,7 @@
               "oktober",
               "november",
               "december",
-          ]
+          ],
       },
       ordinal: function () {
           return ".";
@@ -58,7 +58,7 @@
       firstDayOfWeek: 1,
       rangeSeparator: " til ",
       weekAbbreviation: "uge",
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.da = Danish;
   var da = fp.l10ns;
@@ -69,4 +69,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=da.js.map

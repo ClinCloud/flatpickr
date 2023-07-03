@@ -1,13 +1,52 @@
-export declare type Locale = {
+export type Locale = {
     weekdays: {
         shorthand: [string, string, string, string, string, string, string];
         longhand: [string, string, string, string, string, string, string];
     };
     months: {
-        shorthand: [string, string, string, string, string, string, string, string, string, string, string, string];
-        longhand: [string, string, string, string, string, string, string, string, string, string, string, string];
+        shorthand: [
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string
+        ];
+        longhand: [
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string
+        ];
     };
-    daysInMonth: [number, number, number, number, number, number, number, number, number, number, number, number];
+    daysInMonth: [
+        number,
+        number,
+        number,
+        number,
+        number,
+        number,
+        number,
+        number,
+        number,
+        number,
+        number,
+        number
+    ];
     firstDayOfWeek: number;
     ordinal: (nth: number) => string;
     rangeSeparator: string;
@@ -20,7 +59,7 @@ export declare type Locale = {
     minuteAriaLabel: string;
     time_24hr: boolean;
 };
-export declare type CustomLocale = {
+export type CustomLocale = {
     ordinal?: Locale["ordinal"];
     daysInMonth?: Locale["daysInMonth"];
     firstDayOfWeek?: Locale["firstDayOfWeek"];
@@ -38,8 +77,34 @@ export declare type CustomLocale = {
         longhand: [string, string, string, string, string, string, string];
     };
     months: {
-        shorthand: [string, string, string, string, string, string, string, string, string, string, string, string];
-        longhand: [string, string, string, string, string, string, string, string, string, string, string, string];
+        shorthand: [
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string
+        ];
+        longhand: [
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string,
+            string
+        ];
     };
 };
-export declare type key = "ar" | "at" | "az" | "be" | "bg" | "bn" | "bs" | "cat" | "cs" | "cy" | "da" | "de" | "default" | "en" | "eo" | "es" | "et" | "fa" | "fi" | "fo" | "fr" | "gr" | "he" | "hi" | "hr" | "hu" | "id" | "is" | "it" | "ja" | "ka" | "ko" | "km" | "kz" | "lt" | "lv" | "mk" | "mn" | "ms" | "my" | "nl" | "no" | "pa" | "pl" | "pt" | "ro" | "ru" | "si" | "sk" | "sl" | "sq" | "sr" | "sv" | "th" | "tr" | "uk" | "vn" | "zh" | "zh_tw";
+export type key = "ar" | "at" | "az" | "be" | "bg" | "bn" | "bs" | "cat" | "cs" | "cy" | "da" | "de" | "default" | "en" | "eo" | "es" | "et" | "fa" | "fi" | "fo" | "fr" | "gr" | "he" | "hi" | "hr" | "hu" | "id" | "is" | "it" | "ja" | "ka" | "ko" | "km" | "kz" | "lt" | "lv" | "mk" | "mn" | "ms" | "my" | "nl" | "no" | "pa" | "pl" | "pt" | "ro" | "ru" | "si" | "sk" | "sl" | "sq" | "sr" | "sv" | "th" | "tr" | "uk" | "vn" | "zh" | "zh_tw";

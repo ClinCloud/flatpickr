@@ -7,7 +7,7 @@
   var fp = typeof window !== "undefined" && window.flatpickr !== undefined
       ? window.flatpickr
       : {
-          l10ns: {}
+          l10ns: {},
       };
   var Croatian = {
       firstDayOfWeek: 1,
@@ -21,7 +21,7 @@
               "Četvrtak",
               "Petak",
               "Subota",
-          ]
+          ],
       },
       months: {
           shorthand: [
@@ -51,9 +51,9 @@
               "Listopad",
               "Studeni",
               "Prosinac",
-          ]
+          ],
       },
-      time_24hr: true
+      time_24hr: true,
   };
   fp.l10ns.hr = Croatian;
   var hr = fp.l10ns;
@@ -64,4 +64,3 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=hr.js.map
