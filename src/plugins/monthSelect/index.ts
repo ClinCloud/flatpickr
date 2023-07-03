@@ -81,7 +81,10 @@ function monthSelectPlugin(pluginConfig?: Partial<Config>): Plugin {
         month.tabIndex = -1;
         month.addEventListener("click", selectMonth);
         self.monthsContainer.appendChild(month);
-        if ((fp.config.minDate && month.dateObj < fp.config.minDate) || (fp.config.maxDate && month.dateObj > fp.config.maxDate)) {
+        if (
+          (fp.config.minDate && month.dateObj < fp.config.minDate) ||
+          (fp.config.maxDate && month.dateObj > fp.config.maxDate)
+        ) {
           month.classList.add("disabled");
         }
       }
@@ -125,23 +128,30 @@ function monthSelectPlugin(pluginConfig?: Partial<Config>): Plugin {
         setCurrentlySelected();
       }
       if (fp.rContainer) {
-        const months: NodeListOf<ElementDate> = fp.rContainer.querySelectorAll(".flatpickr-monthSelect-month");
+        const months: NodeListOf<ElementDate> = fp.rContainer.querySelectorAll(
+          ".flatpickr-monthSelect-month"
+        );
         months.forEach(month => {
           month.dateObj.setFullYear(fp.currentYear);
-          if ((fp.config.minDate && month.dateObj < fp.config.minDate) || (fp.config.maxDate && month.dateObj > fp.config.maxDate)) {
+          if (
+            (fp.config.minDate && month.dateObj < fp.config.minDate) ||
+            (fp.config.maxDate && month.dateObj > fp.config.maxDate)
+          ) {
             month.classList.add("disabled");
           } else {
             month.classList.remove("disabled");
           }
         });
       }
-      
     }
 
     function selectMonth(e: Event) {
       e.preventDefault();
       e.stopPropagation();
-      if (e.target instanceof Element && !e.target.classList.contains("disabled")) {
+      if (
+        e.target instanceof Element &&
+        !e.target.classList.contains("disabled")
+      ) {
         setMonth((e.target as MonthElement).dateObj);
         fp.close();
       }

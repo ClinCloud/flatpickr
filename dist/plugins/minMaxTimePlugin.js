@@ -86,15 +86,15 @@
       clickOpens: true,
       closeOnSelect: true,
       conjunction: ", ",
-      dateFormat: "Y-m-d",
-      defaultHour: 12,
+      dateFormat: "Y-m-d H:i",
+      defaultHour: 0,
       defaultMinute: 0,
       defaultSeconds: 0,
       disable: [],
       disableMobile: false,
       enable: [],
       enableSeconds: false,
-      enableTime: false,
+      enableTime: true,
       errorHandler: function (err) {
           return typeof console !== "undefined" && console.warn(err);
       },
@@ -141,7 +141,7 @@
       shorthandCurrentMonth: false,
       showMonths: 1,
       static: false,
-      time_24hr: false,
+      time_24hr: true,
       weekNumbers: false,
       wrap: false,
       showUnButtons: false,
@@ -216,7 +216,7 @@
       yearAriaLabel: "Year",
       hourAriaLabel: "Hour",
       minuteAriaLabel: "Minute",
-      time_24hr: false
+      time_24hr: true
   };
 
   var createDateFormatter = function (_a) {
@@ -327,3 +327,4 @@
   return minMaxTimePlugin;
 
 }));
+//# sourceMappingURL=minMaxTimePlugin.js.map

@@ -29,3 +29,4 @@
   return labelPlugin;
 
 }));
+//# sourceMappingURL=labelPlugin.js.map

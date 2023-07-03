@@ -678,6 +678,7 @@ span.flatpickr-weekday {
       justify-content: space-around;
   background: #fff;
   border-bottom: 1px solid #eceef1;
+  border-left: 1px solid #eceef1;
 }
 .flatpickr-button {
   padding: 0 4px 0 4px;

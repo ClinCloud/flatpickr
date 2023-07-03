@@ -812,7 +812,7 @@
         yearAriaLabel: "Year",
         hourAriaLabel: "Hour",
         minuteAriaLabel: "Minute",
-        time_24hr: false
+        time_24hr: true
     };
 
     var fp$c = typeof window !== "undefined" && window.flatpickr !== undefined
@@ -3461,3 +3461,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
+//# sourceMappingURL=index.js.map

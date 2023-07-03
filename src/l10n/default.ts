@@ -67,7 +67,7 @@ export const english: Locale = {
   yearAriaLabel: "Year",
   hourAriaLabel: "Hour",
   minuteAriaLabel: "Minute",
-  time_24hr: false,
+  time_24hr: true,
 };
 
 export default english;

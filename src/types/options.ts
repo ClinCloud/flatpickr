@@ -253,9 +253,9 @@ Use it along with "enableTime" to create a time picker. */
   /* See https://chmln.github.io/flatpickr/examples/#flatpickr-external-elements */
   wrap: boolean;
 
-  showUnButtons:boolean;
+  showUnButtons: boolean;
 
-  unDateformat:string;
+  unDateformat: string;
 }
 
 export type Options = Partial<BaseOptions>;
@@ -329,7 +329,7 @@ export interface ParsedOptions {
   weekNumbers: boolean;
   wrap: boolean;
   showUnButtons: boolean;
-  unDateformat:string;
+  unDateformat: string;
 }
 
 export const defaults: ParsedOptions = {
@@ -347,15 +347,15 @@ export const defaults: ParsedOptions = {
   clickOpens: true,
   closeOnSelect: true,
   conjunction: ", ",
-  dateFormat: "Y-m-d",
-  defaultHour: 12,
+  dateFormat: "Y-m-d H:i",
+  defaultHour: 0,
   defaultMinute: 0,
   defaultSeconds: 0,
   disable: [],
   disableMobile: false,
   enable: [],
   enableSeconds: false,
-  enableTime: false,
+  enableTime: true,
   errorHandler: (err: Error) =>
     typeof console !== "undefined" && console.warn(err),
   getWeek: (givenDate: Date) => {
@@ -410,9 +410,9 @@ export const defaults: ParsedOptions = {
   shorthandCurrentMonth: false,
   showMonths: 1,
   static: false,
-  time_24hr: false,
+  time_24hr: true,
   weekNumbers: false,
   wrap: false,
-  showUnButtons:false,
-  unDateformat:"year"
+  showUnButtons: false,
+  unDateformat: "year",
 };
