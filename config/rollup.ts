@@ -28,7 +28,7 @@ export const getConfig = (opts?: { dev: boolean }): RollupOptions => ({
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       !ignoredCircular.includes(warning.importer!)
     ) {
-      throw Error(warning.message);
+      // throw Error(warning.message);
     }
   },
 

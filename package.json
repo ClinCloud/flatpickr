@@ -52,9 +52,9 @@
     "stylus-loader": "^7.1.0",
     "terser": "^4.0.0",
     "ts-jest": "24.0.2",
-    "ts-node": "8.2.0",
-    "tslib": "^1.9.3",
-    "typescript": "^3.4.5"
+    "ts-node": "10.9.1",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
   },
   "main": "dist/flatpickr.js",
   "style": "dist/flatpickr.css",
@@ -82,5 +82,9 @@
     "ie >= 9",
     "last 2 versions",
     "safari >= 7"
-  ]
+  ],
+  "dependencies": {
+    "@types/babel__core": "^7.20.1",
+    "@types/babel__traverse": "^7.20.1"
+  }
 }
